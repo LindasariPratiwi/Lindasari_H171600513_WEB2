@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Artikel</div>
 
@@ -33,7 +33,14 @@
 			<td>{!! $item->kategori_artikel_id !!}</td>
 			<td>
 			<a href="{!! route('artikel.show',[$item->id]) !!}" class="btn btn-primary">Lihat</a>
-		</td>
+
+			<a href="{!! route('artikel.edit',[$item->id]) !!}" class="btn btn-success">Ubah</a>
+
+			{!! Form::open(['route' => ['artikel.destroy', $item->id], 'method' => 'delete']) !!}
+
+			{!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger']); !!}
+
+			{!! Form::close() !!}
 		</tr>
 
 		@endforeach

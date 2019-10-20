@@ -10,7 +10,7 @@
                 <div class="card-body">
                   
                   <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right">Judu</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-right">Judul</label>
                         <label for="name" class="col-md-4 col-form-label text-md-left">{!! $Artikel ->judul!!}</label>
                       </div>
 

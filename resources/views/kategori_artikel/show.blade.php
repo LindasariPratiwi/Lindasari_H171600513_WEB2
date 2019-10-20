@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -20,7 +20,7 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right">Users Id</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-right">User Id</label>
                         <label for="name" class="col-md-4 col-form-label text-md-left">{!! $KategoriArtikel ->users_id!!}</label>
                       </div>
 

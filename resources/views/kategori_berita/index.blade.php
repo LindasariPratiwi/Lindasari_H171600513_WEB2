@@ -29,7 +29,14 @@
 			<td>{!! $item->updated_at->format('d/m/Y H:i:s') !!}</td>
 			<td>
 			<a href="{!! route('kategori_berita.show',[$item->id]) !!}" class="btn btn-primary">Lihat</a>
-		</td>
+		
+			<a href="{!! route('kategori_berita.edit',[$item->id]) !!}" class="btn btn-success">Ubah</a>
+
+			{!! Form::open(['route' => ['kategori_berita.destroy', $item->id], 'method' => 'delete']) !!}
+
+			{!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger']); !!}
+
+			{!! Form::close() !!}
 		</tr>
 
 		@endforeach
